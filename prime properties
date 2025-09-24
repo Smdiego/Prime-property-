@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Properties - Expanded Listings and Features</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .carousel-container {
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-card {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+        .testimonial-button {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center p-4 sm:p-6 md:p-8">
+
+    <!-- Header Section -->
+    <header class="w-full bg-white rounded-3xl shadow-lg p-6 flex flex-col sm:flex-row justify-between items-center mb-8 max-w-[1200px]">
+        <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">Prime Properties</div>
+        <nav>
+            <ul class="flex flex-wrap justify-center space-x-2 sm:space-x-6 text-sm sm:text-base">
+                <li><a href="#houses" class="text-gray-600 hover:text-blue-500 transition duration-300">Houses</a></li>
+                <li><a href="#lands" class="text-gray-600 hover:text-blue-500 transition duration-300">Lands</a></li>
+                <li><a href="#about" class="text-gray-600 hover:text-blue-500 transition duration-300">About Us</a></li>
+                <li><a href="#agents" class="text-gray-600 hover:text-blue-500 transition duration-300">Agents</a></li>
+                <li><a href="#testimonials" class="text-gray-600 hover:text-blue-500 transition duration-300">Testimonials</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="w-full max-w-[1200px]">
+        <section id="hero" class="bg-blue-600 text-white rounded-3xl shadow-xl p-8 md:p-16 text-center mb-8">
+            <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-4">Find Your Dream Property.</h1>
+            <p class="text-lg sm:text-xl font-medium mb-6">Explore our curated selection of beautiful homes and prime land for sale.</p>
+            <a href="#houses" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 inline-block">Explore Listings</a>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="w-full mb-8">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-6">About Prime Properties</h2>
+            <div class="bg-white rounded-3xl shadow-lg p-6 text-center">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Prime Properties is dedicated to helping you find your perfect home or investment. With a team of experienced agents and a deep knowledge of the market, we provide personalized service to make your real estate journey smooth and successful. Our mission is to connect people with properties that exceed their expectations.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    We believe in transparency, integrity, and building lasting relationships. Whether you are buying, selling, or just exploring, we are here to guide you every step of the way.
+                </p>
+            </div>
+        </section>
+
+        <!-- Search and Listings Section -->
+        <section id="listings" class="w-full">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-6">Explore Our Listings</h2>
+            <div class="flex justify-center mb-6">
+                <input type="text" id="search-input" placeholder="Search for properties..." class="w-full max-w-md p-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+            </div>
+
+            <div id="property-listings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Listing 1 (Penthouse) -->
+                <div class="property-card bg-white rounded-3xl shadow-lg p-6 transform hover:scale-105 transition duration-300" data-category="house" data-title="Luxury Penthouse in NYC" data-location="New York City">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Luxury+Penthouse" alt="Luxury penthouse with a city view" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold mb-2">Luxury Penthouse in NYC</h3>
+                    <p class="text-gray-600 mb-2">4 Beds | 5 Baths | 3,200 sq ft</p>
+                    <p class="text-2xl font-bold text-green-600 mb-4">$8,500,000</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 font-medium view-details-btn">View Details &rarr;</a>
+                </div>
+                <!-- Listing 2 (Duplex) -->
+                <div class="property-card bg-white rounded-3xl shadow-lg p-6 transform hover:scale-105 transition duration-300" data-category="house" data-title="Modern Dutch Duplex" data-location="Amsterdam">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Modern+Duplex" alt="A Dutch duplex in Amsterdam" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold mb-2">Modern Dutch Duplex</h3>
+                    <p class="text-gray-600 mb-2">3 Beds | 2.5 Baths | 1,800 sq ft</p>
+                    <p class="text-2xl font-bold text-green-600 mb-4">$1,100,000</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 font-medium view-details-btn">View Details &rarr;</a>
+                </div>
+                <!-- Listing 3 (Villa) -->
+                <div class="property-card bg-white rounded-3xl shadow-lg p-6 transform hover:scale-105 transition duration-300" data-category="house" data-title="Lakeside Villa in Tuscany" data-location="Tuscany">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Lakeside+Villa" alt="A beautiful villa on a lake" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold mb-2">Lakeside Villa in Tuscany</h3>
+                    <p class="text-gray-600 mb-2">5 Beds | 4 Baths | 4,500 sq ft</p>
+                    <p class="text-2xl font-bold text-green-600 mb-4">$2,950,000</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 font-medium view-details-btn">View Details &rarr;</a>
+                </div>
+                <!-- Listing 4 (Land Portugal) -->
+                <div class="property-card bg-white rounded-3xl shadow-lg p-6 transform hover:scale-105 transition duration-300" data-category="land" data-title="Coastal Plot in Portugal" data-location="Portugal">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Coastal+Plot" alt="Coastal plot in Portugal" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold mb-2">Coastal Plot in Portugal</h3>
+                    <p class="text-gray-600 mb-2">1.5 acres, ocean views</p>
+                    <p class="text-2xl font-bold text-green-600 mb-4">$450,000</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 font-medium view-details-btn">View Details &rarr;</a>
+                </div>
+                <!-- Listing 5 (Land Tuscany) -->
+                <div class="property-card bg-white rounded-3xl shadow-lg p-6 transform hover:scale-105 transition duration-300" data-category="land" data-title="Rural Acreage in Tuscany" data-location="Tuscany">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Rural+Acreage" alt="Rural acreage in Tuscany" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold mb-2">Rural Acreage in Tuscany</h3>
+                    <p class="text-gray-600 mb-2">10 acres, great for a vineyard</p>
+                    <p class="text-2xl font-bold text-green-600 mb-4">$250,000</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 font-medium view-details-btn">View Details &rarr;</a>
+                </div>
+                <!-- Listing 6 (Land Colorado) -->
+                <div class="property-card bg-white rounded-3xl shadow-lg p-6 transform hover:scale-105 transition duration-300" data-category="land" data-title="Mountain View Land, Colorado" data-location="Colorado">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Mountain+View+Land" alt="Mountain view land in Colorado" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold mb-2">Mountain View Land, Colorado</h3>
+                    <p class="text-gray-600 mb-2">5 acres, for a cabin retreat</p>
+                    <p class="text-2xl font-bold text-green-600 mb-4">$150,000</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 font-medium view-details-btn">View Details &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Agents Section -->
+        <section id="agents" class="w-full mt-8">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-6">Meet Our Agents</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Agent 1 -->
+                <div class="bg-white rounded-3xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/150x150/e5e7eb/6b7280?text=Jane+Doe" alt="Headshot of Jane Doe" class="rounded-full mx-auto mb-4 w-24 h-24 sm:w-32 sm:h-32 object-cover">
+                    <h3 class="text-xl font-bold mb-1">Jane Doe</h3>
+                    <p class="text-blue-500 font-medium mb-2">Senior Agent</p>
+                    <p class="text-gray-600 text-sm">Specializing in luxury residential properties with over 10 years of experience.</p>
+                </div>
+                <!-- Agent 2 -->
+                <div class="bg-white rounded-3xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/150x150/d1d5db/4b5563?text=John+Smith" alt="Headshot of John Smith" class="rounded-full mx-auto mb-4 w-24 h-24 sm:w-32 sm:h-32 object-cover">
+                    <h3 class="text-xl font-bold mb-1">John Smith</h3>
+                    <p class="text-blue-500 font-medium mb-2">Commercial Specialist</p>
+                    <p class="text-gray-600 text-sm">An expert in commercial real estate and land acquisition for development.</p>
+                </div>
+                <!-- Agent 3 -->
+                <div class="bg-white rounded-3xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/150x150/9ca3af/1f2937?text=Emily+Jones" alt="Headshot of Emily Jones" class="rounded-full mx-auto mb-4 w-24 h-24 sm:w-32 sm:h-32 object-cover">
+                    <h3 class="text-xl font-bold mb-1">Emily Jones</h3>
+                    <p class="text-blue-500 font-medium mb-2">Listing Agent</p>
+                    <p class="text-gray-600 text-sm">Dedicated to helping clients sell their homes quickly and for the best price.</p>
+                </div>
+                <!-- Agent 4 -->
+                <div class="bg-white rounded-3xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/150x150/d4d4d8/52525b?text=Michael+Lee" alt="Headshot of Michael Lee" class="rounded-full mx-auto mb-4 w-24 h-24 sm:w-32 sm:h-32 object-cover">
+                    <h3 class="text-xl font-bold mb-1">Michael Lee</h3>
+                    <p class="text-blue-500 font-medium mb-2">Buyer's Agent</p>
+                    <p class="text-gray-600 text-sm">Passionate about finding first-time home buyers their perfect match.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="w-full mt-8">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-6">What Our Clients Say</h2>
+            <div class="relative max-w-xl mx-auto">
+                <div class="carousel-container rounded-3xl shadow-lg bg-white p-8">
+                    <div class="carousel-track" id="testimonial-track">
+                        <!-- Testimonial Card 1 -->
+                        <div class="carousel-card p-4 text-center">
+                            <p class="text-gray-700 italic mb-4">"The team at Prime Properties was incredibly professional and found us the perfect home in less than a month. Their knowledge of the market is unmatched!"</p>
+                            <p class="font-bold text-blue-600">- Sarah & Mark T.</p>
+                        </div>
+                        <!-- Testimonial Card 2 -->
+                        <div class="carousel-card p-4 text-center">
+                            <p class="text-gray-700 italic mb-4">"Selling our land was effortless with Prime Properties. They handled everything and got us a price we were thrilled with. Highly recommend!"</p>
+                            <p class="font-bold text-blue-600">- The Miller Family</p>
+                        </div>
+                        <!-- Testimonial Card 3 -->
+                        <div class="carousel-card p-4 text-center">
+                            <p class="text-gray-700 italic mb-4">"Our agent was patient, knowledgeable, and genuinely cared about our needs. They helped us navigate a complex market with ease. Thank you!"</p>
+                            <p class="font-bold text-blue-600">- Alex P.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="prev-btn" class="testimonial-button absolute top-1/2 -left-6 transform -translate-y-1/2 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-btn" class="testimonial-button absolute top-1/2 -right-6 transform -translate-y-1/2 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="w-full mt-8">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-6">Contact Our Team</h2>
+            <div class="bg-white rounded-3xl shadow-lg p-6">
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Send Message</button>
+                </form>
+                <p class="text-center text-gray-600 mt-4">Or email us directly at: <a href="mailto:officialdiego77@gmail.com" class="text-blue-600 hover:underline">officialdiego77@gmail.com</a></p>
+                <div id="form-message" class="mt-4 text-center hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-[1200px] mt-8 bg-gray-800 text-white rounded-3xl p-6 text-center shadow-lg">
+        <p class="mt-6 text-gray-500 text-sm">&copy; 2024 Prime Properties. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Testimonial Carousel ---
+            const testimonialTrack = document.getElementById('testimonial-track');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const cards = document.querySelectorAll('.carousel-card');
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                testimonialTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                updateCarousel();
+            });
+
+            // --- Contact Form Handling ---
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData.entries());
+
+                // Simulate form submission
+                formMessage.classList.remove('hidden', 'text-red-500');
+                formMessage.classList.add('text-gray-600');
+                formMessage.innerText = 'Sending message...';
+
+                try {
+                    await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call delay
+                    
+                    formMessage.classList.remove('text-gray-600');
+                    formMessage.classList.add('text-green-600');
+                    formMessage.innerText = 'Message sent successfully! We will get back to you shortly.';
+                    contactForm.reset();
+
+                } catch (error) {
+                    formMessage.classList.remove('text-gray-600');
+                    formMessage.classList.add('text-red-500');
+                    formMessage.innerText = 'There was an error sending your message. Please try again later.';
+                    console.error('Form submission error:', error);
+                } finally {
+                    formMessage.classList.remove('hidden');
+                }
+            });
+
+            // --- Property Search/Filter ---
+            const searchInput = document.getElementById('search-input');
+            const propertyCards = document.querySelectorAll('.property-card');
+
+            searchInput.addEventListener('keyup', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                propertyCards.forEach(card => {
+                    const title = card.getAttribute('data-title').toLowerCase();
+                    const location = card.getAttribute('data-location').toLowerCase();
+                    if (title.includes(searchTerm) || location.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
